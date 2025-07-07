@@ -17,7 +17,7 @@ A full-stack web application for managing investment portfolios with real-time s
 ```
 
 portfolio-manager/
-├── backend/                 # Spring Boot application
+├── portfolio-manager/                 # Spring Boot application
 ├── smart-invest-ui/         # Angular frontend app
 
 ````
