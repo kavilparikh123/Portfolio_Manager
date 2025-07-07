@@ -1,0 +1,19 @@
+<h2>My Portfolios</h2>
+
+<form (ngSubmit)="createPortfolio()">
+  <input [(ngModel)]="newPortfolioName" name="portfolioName" placeholder="New portfolio name" required />
+  <button type="submit">Create</button>
+</form>
+
+<ul>
+  <li *ngFor="let p of portfolios">
+    <strong>{{ p.name }}</strong> (ID: {{ p.id }})
+    <button (click)="loadRisk(p.id)">Check Risk</button>
+
+    <div *ngIf="riskData[p.id]">
+      <p>Risk Score: {{ riskData[p.id].score | number:'1.2-2' }}</p>
+      <p>Risk Level: <span [ngClass]="riskData[p.id].level.toLowerCase()">{{ riskData[p.id].level }}</span></p>
+    </div>
+  </li>
+</ul>
+

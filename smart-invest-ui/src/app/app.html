@@ -1,0 +1,18 @@
+<!-- Top Navigation -->
+<nav class="navbar">
+  <div class="logo">📊 SmartInvest</div>
+  <div class="nav-links">
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+    <a routerLink="/auth/login" routerLinkActive="active" *ngIf="!isLoggedIn()">Login</a>
+    <a (click)="logout()" *ngIf="isLoggedIn()">Logout</a>
+  </div>
+</nav>
+
+<!-- Alert Component -->
+<app-alerts></app-alerts>
+
+<!-- Route Content -->
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>

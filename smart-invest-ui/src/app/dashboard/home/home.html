@@ -1,0 +1,21 @@
+<h2>Live Stocks</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Symbol</th>
+      <th>Price</th>
+      <th>Last Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let stock of stocks">
+      <td>{{ stock.symbol }}</td>
+      <td>{{ stock.price | currency }}</td>
+      <td>{{ stock.lastUpdated | date:'shortTime' }}</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Live Alerts</h2>
+<ul>
+  <li *ngFor="let msg of alerts">{{ msg }}</li>
+</ul>
